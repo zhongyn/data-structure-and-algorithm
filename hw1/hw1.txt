@@ -11,7 +11,7 @@ MRD(v):
 	let children(v) = {u1, u2,.., uk}, number of children = k
 	maxchild = max(MRD(u1), MRD(u2),.., MRD(uk))
 	if k > maxchild:
-		retun k
+		return k
 	else:
 		return maxchild+1
 
@@ -60,7 +60,7 @@ Given an arbitratry stack of pancakes P[1..n].
 SortPancakes(P[1..n]):
 	if n == 1, no need to sort
 	if n > 1
-		flip the top k pancakes, where the kth one (next to spatula) is the largest pancake
+		flip the top k pancakes, where the kth one (next to spatula) is the largest one
 		flip all the pancakes
 		SortPancakes(top (n-1) pancakes)
 
@@ -75,7 +75,7 @@ SortPancakes(P[1..n]):
 		else
 			no need to sort
 	if n > 1
-		flip the top k pancakes, where the kth one (next to spatula) is the largest pancake
+		flip the top k pancakes, where the kth one (next to spatula) is the largest one
 		if the burned size of the top pancake is facing down
 			flip the top pancake
 		flip all the pancakes
@@ -104,8 +104,5 @@ FindIntersect(P[1..n],Q[1..n]):
 Running time: O(n^2)
 
 (b)
-
-
-
 
 
