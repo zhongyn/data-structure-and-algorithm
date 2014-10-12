@@ -55,6 +55,8 @@ Problem 2
 
 Given an arbitratry stack of pancakes P[1..n].
 
+(a)
+
 SortPancakes(P[1..n]):
 	if n == 1, no need to sort
 	if n > 1
@@ -62,4 +64,31 @@ SortPancakes(P[1..n]):
 		flip all the pancakes
 		SortPancakes(top (n-1) pancakes)
 
-Total flips: 2(n-1)
+Total flips in the worst case: 2(n-1)
+
+(b)
+
+SortPancakes(P[1..n]):
+	if n == 1
+		if the burned size of the pancake is facing up
+			flip the pancake
+		else
+			no need to sort
+	if n > 1
+		flip the top k pancakes, where the kth one (next to spatula) is the largest pancake
+		if the burned size of the top pancake is facing down
+			flip the top pancake
+		flip all the pancakes
+		SortPancakes(top (n-1) pancakes)
+
+Total flips in the worst case: 3(n-1)+1
+
+
+-----------------------
+Problem 1
+-----------------------
+
+
+
+
+
