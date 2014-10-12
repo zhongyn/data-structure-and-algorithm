@@ -1,0 +1,27 @@
+----------------------
+Problem 4
+----------------------
+
+Say MRD(v) is the minimum number of rounds required for the message to be delivered to all nodes, v is the root node.
+Then MRD(v) can be solved in recursion.
+
+MRD(v):
+	if children(v) == NULL:
+		return 0
+	let children(v) = {u1, u2,.., uk}, number of children = k
+	maxchild = max(MRD(u1), MRD(u2),.., MRD(uk))
+	if k > maxchild:
+		retun k
+	else:
+		return maxchild+1
+
+So we just need to fill out the tree with MSR(v) in bottom-up order, starting from the leaves.
+
+Running time: O(n), each node is called only once by its parent.
+Space: O(n)
+
+-----------------------
+Problem 3
+-----------------------
+
+
