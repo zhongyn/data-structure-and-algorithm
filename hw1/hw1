@@ -88,6 +88,23 @@ Total flips in the worst case: 3(n-1)+1
 Problem 1
 -----------------------
 
+Given two set of n points, P[1..n], Q[1..n].
+
+(a)
+
+FindIntersect(P[1..n],Q[1..n]):
+	if n <= 1
+		return 0
+	count = 0
+	for i in (2,n):
+		if (P[i]-P[1])*(Q[i]-Q[1]) < 0
+			count += 1
+	return count+FindIntersect(P[2..n],Q[2..n])
+
+Running time: O(n^2)
+
+(b)
+
 
 
 
